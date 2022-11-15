@@ -1,0 +1,21 @@
+
+
+@media (max-width: $small-mobiles-maxwidth) {
+    .search-input {
+        border-radius: 10px;
+        padding: 5px;
+        margin: 10% 0 10% 0;
+        width: 70%;
+        font-size: large;
+    }
+}
+
+@media (min-width: $large-mobiles-minwidth)  {
+    .search-input {
+        border-radius: 10px;
+        padding: 5px;
+        margin: 5% 0 5% 0;
+        width: 40%;
+        font-size: large;
+    }
+}

@@ -1,0 +1,75 @@
+$bg-color: #282c34;
+$text-color: #b7b7b7;
+$small-mobiles-maxwidth: 600px;
+$large-mobiles-minwidth: 601px;
+
+@import './components/SearchBar/searchBarStyle';
+
+.App {
+  text-align: center;
+  background-color: $bg-color;
+  height: 100vh;
+  width: 100vw;
+}
+
+@media (max-width: $small-mobiles-maxwidth) {
+
+  .item-list {
+    text-align: start;
+    margin: 0 15% 0 15%;
+    color: $text-color;
+    list-style: none;
+  }
+ 
+}
+
+@media (min-width: $large-mobiles-minwidth)  {
+
+  .item-list {
+    text-align: start;
+    margin: 0 30% 0 30%;
+    color: $text-color;
+    list-style: none;
+  }
+}
+
+.item-list li {
+  padding: 5%;
+}
+
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: $bg-color;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
