@@ -19,6 +19,7 @@ $large-mobiles-minwidth: 601px;
     margin: 0 15% 0 15%;
     color: $text-color;
     list-style: none;
+    font-size: large;
   }
  
 }
@@ -30,13 +31,24 @@ $large-mobiles-minwidth: 601px;
     margin: 0 30% 0 30%;
     color: $text-color;
     list-style: none;
+    font-size: large;
   }
 }
+.item-list-element {
+  padding: 5% 0 5% 0;
+ 
+  border-bottom-style: solid;
+  border-bottom-color: $text-color;
+  border-bottom-width: 2px;
 
-.item-list li {
-  padding: 5%;
+  display: flex;
+  justify-content: space-between;
 }
 
+.button-delete {
+  background-color: transparent;
+  border-style: none;
+}
 
 
 .App-logo {

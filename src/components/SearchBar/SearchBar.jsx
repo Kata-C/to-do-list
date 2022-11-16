@@ -5,14 +5,14 @@ const SearchBar = (props) => {
 
     const changeValue = (event) => {
         setSearchQuery(event.target.value);
-        props.setSearchQuery(event.target.value);
+        // props.setSearchQuery(event.target.value);
     }
 
     const addItem = (event) => {
         if(event.key === 'Enter') {
             props.addItem(searchQuery);
             setSearchQuery('');
-            props.setSearchQuery(null);
+            // props.setSearchQuery(null);
         }
     }
 

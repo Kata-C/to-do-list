@@ -8,6 +8,8 @@
         width: 70%;
         font-size: large;
     }
+
+    
 }
 
 @media (min-width: $large-mobiles-minwidth)  {
@@ -18,4 +20,8 @@
         width: 40%;
         font-size: large;
     }
+}
+
+.search-input:focus-visible{
+    outline-style: none;
 }

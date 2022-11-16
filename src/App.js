@@ -13,47 +13,31 @@ function App() {
   }, []);
 
   const addItem = (item) => {
-    setList([...list, item]);
-    console.log('Lista: ' + list)
+    if(item) setList([...list, item]);
   }
+
+  const deleteItem = (index) => {
+    setList(list.filter((item, itemIndex)=> itemIndex !== index));
+  }
+  
 
   const setSearchQuery = (query) => {
     setQuery(query);
   }
 
-  const searchResults = () => {
-    let results = [];
-    list.forEach(item => {
-
-      if(item === query) {
-        results =  [...results, item];
-      } else {
-        let words = item.split(' ');
-        words.forEach(word => {
-          let queryWords = query.split(' ');
-          queryWords.forEach();
-
-          
-          if(item[word.index] === query) {
-            results =  [...results, item];
-          }
-        })
-      }
-      
-    });
-    console.log(results);
-    return results;
-  }
-
   return (
     <div className="App">
-      <SearchBar list={list} addItem={addItem} setSearchQuery = {setSearchQuery}/>
+      <SearchBar list={list} addItem={addItem}/>
       <div className='item-list'>
         {
-          query ? 
-          searchResults().map(item => <li> {item} </li>)
-          :
-          list.map(item => <li> {item} </li>)
+          list.map((item, index) => {
+            return <div className='item-list-element'> 
+              <li key={index}> {item} </li>
+              <button className='button-delete' onClick={() => deleteItem(index)} src>
+                <img src='done.png' width='50%'/>
+              </button>
+            </div>
+          })
         }
       </div>
       
