@@ -27,6 +27,12 @@ function App() {
 
   return (
     <div className="App">
+      <div className='container'>
+
+a
+
+      </div>
+    
       <SearchBar list={list} addItem={addItem}/>
       <div className='item-list'>
         {
