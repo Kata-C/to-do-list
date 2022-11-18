@@ -1,19 +1,26 @@
 $bg-color: #282c34;
-$container-color: #e1e1e1;
+$container-color: #f1f1f1;
 $small-mobiles-maxwidth: 600px;
 $large-mobiles-minwidth: 601px;
 
 @import './components/SearchBar/searchBarStyle';
+@import './components//Footer//footer';
+
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .App {
   text-align: center;
   background-color: $bg-color;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  width: 100%;
+  display: inline-block;
 }
 
 .container {
-  width: 60%;
   background-color: $container-color;
   margin: auto;
 }
@@ -23,10 +30,14 @@ $large-mobiles-minwidth: 601px;
 
   .item-list {
     text-align: start;
-    margin: 0 15% 0 15%;
+    margin: 0 5% 0 5%;
     // color: $text-color;
     list-style: none;
-    font-size: large;
+    font-size: medium;
+  }
+
+  .container {
+    width: 85%;
   }
  
 }
@@ -38,7 +49,11 @@ $large-mobiles-minwidth: 601px;
     margin: 0 30% 0 30%;
     // color: $text-color;
     list-style: none;
-    font-size: large;
+    font-size: medium;
+  }
+
+  .container {
+    width: 40%;
   }
 }
 

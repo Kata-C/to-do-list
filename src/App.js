@@ -1,10 +1,13 @@
 import logo from './logo.svg';
 import './App.scss';
-import SearchBar from './components/SearchBar'
+import SearchBar from './components/SearchBar';
+import Footer from './components/Footer';
 import { useEffect, useState } from 'react';
 
 function App() {
   const [list, setList] = useState([]);
+  const [listActive, setListActive] = useState([]);
+  const [listComplete, setListComplete] = useState([]);
   const [query, setQuery] = useState(null);
 
   useEffect(() => {
@@ -29,22 +32,24 @@ function App() {
     <div className="App">
       <div className='container'>
 
-a
+        <h2>Things to do</h2>
+        <SearchBar list={list} addItem={addItem}/>
+        <Footer />
+        <div className='item-list'>
+          {
+            list.map((item, index) => {
+              return <div className='item-list-element'> 
+                <li key={index}> {item} </li>
+                <button className='button-delete' onClick={() => deleteItem(index)} src>
+                  {/* <img src='done.png' width='50%'/> */}
+                  Eliminar
+                </button>
+              </div>
+            })
+          }
+        </div>
+        
 
-      </div>
-    
-      <SearchBar list={list} addItem={addItem}/>
-      <div className='item-list'>
-        {
-          list.map((item, index) => {
-            return <div className='item-list-element'> 
-              <li key={index}> {item} </li>
-              <button className='button-delete' onClick={() => deleteItem(index)} src>
-                <img src='done.png' width='50%'/>
-              </button>
-            </div>
-          })
-        }
       </div>
       
     </div>
